@@ -1,6 +1,6 @@
 # Desafios 18
 
-from math import sin, cos, tan, pi, radians
+from math import sin, cos, tan, radians
 
 ang_graus = float(input('Digite um ângulo: '))
 
