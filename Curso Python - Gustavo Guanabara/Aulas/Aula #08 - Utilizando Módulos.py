@@ -38,3 +38,5 @@ print(num2)
 import emoji
 
 print(emoji.emojize('Olá, Mundo :sunglasses:', use_aliases=True))
+
+# Desafios 16 -> 21
