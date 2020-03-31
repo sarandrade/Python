@@ -1,9 +1,9 @@
 # Desafios 19
 
-import random
+from random import randint
 
 lista = input('Digite o nome dos 4 alunos: ').split()
 
-escolhido = random.randint(0,3)
+escolhido = randint(0,3)
 
 print('O sorteado foi {}'.format(lista[escolhido]))
