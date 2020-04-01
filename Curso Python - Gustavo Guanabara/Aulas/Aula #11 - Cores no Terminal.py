@@ -44,6 +44,6 @@ print('Os valores são \033[35m{}\033[m e \033[36m{}\033[m.'.format(1, 2))
 
 print('O valor é {}{}{}.'.format('\033[34m', 11, '\033[m'))
 
-cores = {'cor1':'\033[35m', 'cor2':'\033[36m', 'tiracor':'\033[m'}
+cores = {'cor1':'\033[35m', 'cor2':'\033[36m', 'tiracor':'\033[m'} # Dicionário 
 
 print('O valor é {}{}{}.'.format(cores['cor1'], 11, cores['tiracor']))
