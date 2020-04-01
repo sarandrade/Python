@@ -1,8 +1,15 @@
 # Desafios 28
 
 from random import randint
-num = int(input('Qual número foi o escolhido?? '))
+from time import sleep
+
+num = int(input('Qual número foi o escolhido pelo computador? '))
 
 esc = randint(0,5)
 
-print('Acertou!!' if num == esc else 'Errou kkk')
+print('-=-'*20)
+print('PROCESSANDO...')
+print('-=-'*20)
+sleep(2)
+
+print('Acertou!!' if num == esc else 'Errou kkk. O número certo era {}.'.format(esc))
