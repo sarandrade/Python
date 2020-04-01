@@ -21,3 +21,5 @@ elif nome in 'Mari Paula Pedro':
 else:
     print('Nome legal!')
 print('Bom dia, {}.'.format(nome))
+
+# Desafios 36 -> 45
