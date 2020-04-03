@@ -4,11 +4,10 @@ from datetime import date
 
 maiores = 0
 menores = 0
+hoje = date.today().year
 
 for i in range(0, 7):
     ano = int(input('Digite o ano de nascimento: '))
-
-    hoje = date.today().year
 
     idade = hoje - ano
 
