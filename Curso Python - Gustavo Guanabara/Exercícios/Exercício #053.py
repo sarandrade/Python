@@ -9,7 +9,6 @@ tamanho = len(frase)
 x = 0
 
 for i in range(0, trunc(tamanho/2) + 1):
-    inicio = i
     fim = tamanho - i - 1
 
     if frase[i] != frase[fim]: 
