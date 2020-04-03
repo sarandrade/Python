@@ -16,7 +16,7 @@ elif idade <= 14:
     categ = 'Infantil'
 elif idade <= 19:
     categ = 'Junior'
-elif idade <= 20: 
+elif idade <= 25: 
     categ = 'Sênior'
 else:
     categ = 'Master'

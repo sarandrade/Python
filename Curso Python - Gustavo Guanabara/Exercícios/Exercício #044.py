@@ -1,5 +1,7 @@
 # Desafios 44
 
+print('{:=^40}'.format(' Mercado '))
+
 valor = float(input('Digite o valor do produto: '))
 
 print('''Escolha a opção de pagamento:
@@ -18,9 +20,10 @@ elif opcao == 2:
     print('O valor do produto será R${:.2f}.'.format(preco))
 elif opcao == 3:
     preco = valor 
-    print('O valor do produto será R${:.2f}.'.format(preco))
+    print('O valor do produto será R${:.2f} em 2x de R${:.2f}.'.format(preco, preco / 2))
 elif opcao == 4:
+    parcelas = int(input('Em quantas vezes deseja pagar? '))
     preco = valor * 1.2
-    print('O valor do produto será R${:.2f}.'.format(preco))
+    print('O valor do produto será R${:.2f} em {}x de R${:.2f}.'.format(preco, parcelas, preco / parcelas))
 else: 
     print('Opção inválida!')

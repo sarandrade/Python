@@ -1,11 +1,13 @@
 # Desafios 43
 
 peso = float(input('Digite seu peso em Kg: '))
-altura = float(input('Digite sua altura em m²: '))
+altura = float(input('Digite sua altura em m: '))
 
-imc = peso / altura
+imc = peso / (altura ** 2)
 
-if imc <= 18.5:
+print('Seu IMC é de {:.2f}.'.format(imc))
+
+if imc < 18.5:
     print('Abaixo do peso.')
 elif imc <= 25:
     print('Peso ideal.')
