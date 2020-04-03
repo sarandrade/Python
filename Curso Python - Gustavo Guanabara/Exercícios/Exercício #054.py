@@ -12,7 +12,7 @@ for i in range(0, 7):
 
     idade = hoje - ano
 
-    if idade >= 18:
+    if idade >= 21:
         maiores += 1
     else:
         menores += 1
