@@ -7,7 +7,7 @@ para = 0
 
 while not (para == 1):
     jogador = int(input('Digite um número entre 0 e 10: '))
-    input()
+
     print('.', end='')
     sleep(1)
     print('.', end='')
@@ -27,7 +27,7 @@ while not (para == 1):
     if jogador == comp:
         print('Jogador X Computador')
         print('[ {} ] X [ {} ] -> Acertou!!'.format(jogador, comp))
-        print('Você ganhou...')
+        print('...Você ganhou...')
         para =1
     else:
         print('Jogador X Computador')
