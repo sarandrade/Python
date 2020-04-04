@@ -19,7 +19,7 @@ while not (para == 1):
     sleep(1)
     print('.', end='')
     sleep(1)
-    print('.')8
+    print('.')
     sleep(1)
 
     comp = randint(0, 10)
