@@ -1,7 +1,7 @@
 # Aula #14 - Estrutura de Repetição while
 
 '''
-while condição:
+while not condição:
     comandos
 '''
 c = 1
