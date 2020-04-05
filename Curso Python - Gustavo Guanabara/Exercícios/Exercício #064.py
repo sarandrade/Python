@@ -1,8 +1,6 @@
 # Desafios 64
 
-num = 0
-soma = 0
-i = 0
+num = i = soma = 0
 
 while num != 999:
     num = int(input('Digite um número inteiro: '))
