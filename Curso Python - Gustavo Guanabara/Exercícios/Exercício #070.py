@@ -16,22 +16,17 @@ while True:
 
     if preco > 1000:
         maismil += 1 
-    if total == preco:
+    if total == preco or preco < val_barato:
         val_barato = preco 
         nome_barato = nome
-    if preco < val_barato:
-        val_barato = preco 
-        nome_barato = nome
-        
-    opcao = input('Deseja continuar [S/N]? ').upper().strip()
+
+    opcao = ' '
+    while opcao not in 'SN':
+        opcao = input('Deseja continuar [S/N]? ').upper().strip()[0]
     print('-'*20)
 
     if opcao == 'N':
         break
-    elif opcao != 'S':
-        print('Opção Inválida!! Tente de novo...')
-        opcao = input('Deseja continuar [S/N]? ').upper().strip()
-        print('-'*20)
 
 print('\n-=-=-=- FIM DO PROGRAMA -=-=-=-')
 print(f'Total da compra: R${total:.2f}')

@@ -10,7 +10,7 @@ cont = 0
 
 while True:
     num = int(input('Digite um valor [0->10]: '))
-    jogador = input('Par ou Ímpar [P/I]? ').upper().strip()
+    jogador = input('Par ou Ímpar [P/I]? ').upper().strip()[0]
     print('-=-'*20)
 
     casa = randint(0, 10)
