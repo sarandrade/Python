@@ -7,7 +7,7 @@ i = 10
 
 while i != 0:
     print(inicio, end=' ')
-    inicio = inicio + razao
+    inicio += razao
     i -= 1
 
     if i == 0:

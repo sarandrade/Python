@@ -34,8 +34,14 @@ while opcao != 5:
             maior = num2
             menor = num1
         print('=> {} > {}'.format(maior, menor))
+
     elif opcao == 4:
+        print('==> Insira novamente os números!')
         num1 = float(input('Digite o primeiro número: ')) 
         num2 = float(input('Digite o segundo número: ')) 
-    elif opcao != 5:
+
+    elif opcao == 5:
+        print('Finalizando o programa...')
+    
+    else:
         print('Opção Inválida... Tente novamente!')	

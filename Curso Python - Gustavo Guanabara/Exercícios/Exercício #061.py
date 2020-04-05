@@ -13,9 +13,9 @@ for i in range(inicio, inicio + 10 * razao, razao):
 inicio = int(input('Digite o primeiro termo da PA: '))
 razao = int(input('Digite a razão da PA: '))
 
-i = 10
+i = 0
 
-while i != 0:
+while i != 10:
     print(inicio, end=' ')
-    inicio = inicio + razao
-    i -= 1
+    inicio += razao
+    i += 1

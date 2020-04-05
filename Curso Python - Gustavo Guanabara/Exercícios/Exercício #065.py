@@ -1,7 +1,6 @@
 # Desafios 65
 
-soma = i = maior = 0
-menor = 1000000
+soma = i = maior = menor =0
 opcao = 'S'
 
 while opcao != 'N':
@@ -12,10 +11,14 @@ while opcao != 'N':
 
         soma += num
         i += 1
-        if num > maior:
-            maior = num
-        if num < menor:
-            menor = num
+
+        if i == 1:
+            maior = menor = num
+        else:
+            if num > maior:
+                maior = num
+            if num < menor:
+                menor = num
     elif opcao != 'N':
         print('Opção Inválida!!')
         opcao = input('Deseja continuar [S/N]? ').upper().strip()
