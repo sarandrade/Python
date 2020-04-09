@@ -1,4 +1,4 @@
-# Aula #17 - Listas (Parte 2)
+# Aula #18 - Listas (Parte 2)
 
 pessoa = []
 pessoa.append('Sara')
