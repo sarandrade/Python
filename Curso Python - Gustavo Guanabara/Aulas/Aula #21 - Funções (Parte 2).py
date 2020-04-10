@@ -1,6 +1,5 @@
 # Aula #21 - Funções (Parte 2)
 
-
 # -> Interactive help
 
 help(print)
