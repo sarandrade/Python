@@ -13,4 +13,4 @@ def diminuir(num=0, p=0):
     return num * (1 - p/100)
 
 def moeda(num=0, moeda='R$'):
-    return f"{moeda}{num:.2f}".replace('.',',')
+    return f"{moeda} {num:.2f}".replace('.',',')
