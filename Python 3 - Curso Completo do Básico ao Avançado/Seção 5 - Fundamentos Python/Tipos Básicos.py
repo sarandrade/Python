@@ -16,12 +16,12 @@ print(type(2.5))
 print(type('Sara'))
 print(type("Sara"))
 
-# Lista
+# Tipo Lista
 
 lista = [1, 2, 3]
 print(lista)
 
-# Dicionário
+# Tipo Dicionário
 
 dic = {'nome':'Sara', 'idade':21}
 print(dic)
