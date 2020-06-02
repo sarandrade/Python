@@ -3,6 +3,7 @@
 # import math as mt -> mt.pi
 from math import pi
 import sys
+import errno
 
 
 def circulo(raio):
@@ -16,9 +17,11 @@ def help():
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         help()
-    else:
-        # Variáveis
-        raio = sys.argv[1]
-        area = circulo(raio)
+        # sys.exit(1) ou 
+        sys.exit(errno.EPERM)
 
-        print(f'A área da circunferência é {area} metros.\n')
+    # Variáveis
+    raio = sys.argv[1]
+    area = circulo(raio)
+
+    print(f'\nA área da circunferência é {area} metros.\n')
