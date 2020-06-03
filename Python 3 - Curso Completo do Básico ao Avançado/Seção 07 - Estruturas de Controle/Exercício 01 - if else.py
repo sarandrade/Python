@@ -1,4 +1,4 @@
-# Exercício - if else
+# Exercício 01 - if else
 
 class TerminalColor:
     erro = '\033[91m'
