@@ -4,7 +4,6 @@
 def fibonacci(limite):
     primeiro = 0
     segundo = 1
-    proximo = 0
     print(f'{primeiro}, {segundo}', end=', ')
     # whilw True: -> While infinito
     while segundo < limite:
