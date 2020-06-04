@@ -10,6 +10,7 @@ def fibonacci(quantidade):
 
     return resultado
 
+
 if __name__ == '__main__':
     # Lista os 15 primeiros números da sequência
     for valor in fibonacci(15):

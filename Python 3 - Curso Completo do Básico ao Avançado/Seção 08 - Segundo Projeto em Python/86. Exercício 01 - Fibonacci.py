@@ -10,5 +10,6 @@ def fibonacci(limite):
         primeiro, segundo = segundo, primeiro + segundo
         print(f'{segundo}', end=', ')
 
+
 if __name__ == '__main__':
     fibonacci(150)
