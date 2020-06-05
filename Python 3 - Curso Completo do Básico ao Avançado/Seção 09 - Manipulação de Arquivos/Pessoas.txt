@@ -1,0 +1,4 @@
+Nome: Maria | Idade: 33
+Nome: João | Idade: 44
+Nome: Ana | Idade: 66
+Nome: Sara | Idade: 21

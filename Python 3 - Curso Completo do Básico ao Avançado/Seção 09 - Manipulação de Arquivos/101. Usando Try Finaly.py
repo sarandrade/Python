@@ -5,7 +5,7 @@ try:
     for pessoa in arquivo:
         # strip() -> Tira os espaços em branco no começo e no fim da string
         # split(',') -> Quebra a string em ','
-        print('Nome: {} | Idade: {}'.format(pessoa.strip().split(',')))
+        print('Nome: {} | Idade: {}'.format(*pessoa.strip().split(',')))
 
 except IndexError:
     pass
