@@ -8,8 +8,8 @@ def resultafo_f1(**podium):
 
 if __name__ == '__main__':
     resultafo_f1(primeiro='L. Hamilton',
-                 segundo='M. Verstappen',
-                 terceiro='S. Vettel')
+                segundo='M. Verstappen',
+                terceiro='S. Vettel')
 
 # Outra alternativa
 
@@ -20,7 +20,9 @@ def resultafo_f1(primeiro, segundo, terceiro):
 
 # Unpacking
 if __name__ == '__main__':
-    podium = {'primeiro': 'L. Hamilton',
-              'segundo': 'M. Verstappen',
-              'terceiro': 'S. Vettel'}
+    podium = {
+        'primeiro': 'L. Hamilton',
+        'segundo': 'M. Verstappen',
+        'terceiro': 'S. Vettel'
+        }
     resultafo_f1(**podium)
