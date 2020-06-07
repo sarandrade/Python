@@ -8,7 +8,7 @@ Funções
     func(p1, p2, p3) = func(1, p3=2, p2=3)
 
 -> Parâmetro *args - Gera uma tupla
--> Parâmetro *kwargs - Gera um dicionário
+-> Parâmetro *kwargs -> keywords arguments - Gera um dicionário 
 
 '''
 def tag_bloco(texto, classe='sucess'):
