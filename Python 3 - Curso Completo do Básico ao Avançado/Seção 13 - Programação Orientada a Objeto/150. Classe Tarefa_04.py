@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 class Projeto:
@@ -7,8 +7,12 @@ class Projeto:
         self.tarefas = []
 
 
-    def add(self, descricao):
-        self.tarefas.append(Tarefa(descricao))
+    def __iter__(self):
+        return self.tarefas.__iter__()
+
+
+    def add(self, descricao, vencimento=None):
+        self.tarefas.append(Tarefa(descricao, vencimento))
 
 
     def pendentes(self):
@@ -21,14 +25,15 @@ class Projeto:
 
 
     def __str__(self):
-        return f'- {self.nome} -> {len(self.pendentes())} tarefa(s) pendente(s)'
+        return f'* {self.nome} -> {len(self.pendentes())} tarefa(s) pendente(s)'
 
 
 class Tarefa:
-    def __init__(self, descricao):
+    def __init__(self, descricao, vencimento=None):
         self.descricao = descricao
         self.feito = False
         self.criacao = datetime.now()
+        self.vencimento = vencimento
 
 
     def concluir(self):
@@ -36,23 +41,33 @@ class Tarefa:
 
 
     def __str__(self):
-        return self.descricao + (' (✔)' if self.feito else '')
+        status = []
+        if self.feito:
+            status.append(' (✔)')
+        elif self.vencimento:
+            if datetime.now() > self.vencimento:
+                status.append(' (Vencida!)')
+            else:
+                dias = (self.vencimento - datetime.now()).days
+                status.append(f' (Vence em {dias} dias)')
+
+        return f'{self.descricao}' + ''.join(status)
 
 
 def main():
     casa = Projeto('Casa')
-    casa.add('Passar roupa')
+    casa.add('Passar roupa', datetime.now())
     casa.add('Lavar prato')
     print(casa)
 
     casa.procurar('Lavar prato').concluir()
 
-    for tarefa in casa.tarefas:
+    for tarefa in casa:
         print(f'-> {tarefa}')
     print(casa)
 
     mercado = Projeto('Lista de Mercado')
-    mercado.add('Suco')
+    mercado.add('Suco', datetime.now() + timedelta(days=3, minutes=12))
     mercado.add('Café')
     mercado.add('Laranja')
     mercado.add('Leite')
@@ -61,7 +76,7 @@ def main():
     comprar_leite = mercado.procurar('Leite')
     comprar_leite.concluir()
 
-    for produto in mercado.tarefas:
+    for produto in mercado:
         print(f'-> {produto}')
     print(mercado)
 

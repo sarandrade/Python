@@ -6,7 +6,8 @@ class Tarefa:
         self.descricao = descricao
         self.__feito = False
         self.criacao = datetime.now()
-    
+
+
     def concluir(self):
         self.__feito = True
 
