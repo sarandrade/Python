@@ -1,3 +1,8 @@
+'''
+Herança
+- Classe Pai ou SuperClasse
+- Classe Filha ou SubClasse
+'''
 from datetime import datetime, timedelta
 
 
@@ -54,10 +59,25 @@ class Tarefa:
         return f'{self.descricao}' + ''.join(status)
 
 
+class TarefaRecorrente(Tarefa):
+    def __init__(self, descricao, vencimento, dias=7):
+        super().__init__(descricao, vencimento)
+        self.dias = dias
+
+
+    def concluir(self):
+        super().concluir()
+        novo_vencimento = datetime.now() + timedelta(days=self.dias)
+
+        return TarefaRecorrente(self.descricao, novo_vencimento, self.dias)
+
+
 def main():
     casa = Projeto('Casa')
     casa.add('Passar roupa', datetime.now())
     casa.add('Lavar prato')
+    casa.tarefas.append(TarefaRecorrente('Trocar lençóis', datetime.now(), 3))
+    casa.tarefas.append(casa.procurar('Trocar lençóis').concluir())
     print(casa)
 
     casa.procurar('Lavar prato').concluir()
