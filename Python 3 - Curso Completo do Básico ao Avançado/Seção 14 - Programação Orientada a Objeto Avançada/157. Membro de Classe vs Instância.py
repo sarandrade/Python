@@ -18,6 +18,7 @@ class Humano:
 
 if __name__ == "__main__":
     jose = Humano('José')
+    Humano.das_cavernas(jose)
     # grokn = Humano('Grokn')
     # grokn.das_cavernas()
     grokn = Humano('Grokn').das_cavernas()
