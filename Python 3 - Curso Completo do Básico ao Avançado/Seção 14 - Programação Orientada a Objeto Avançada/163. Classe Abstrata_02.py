@@ -63,11 +63,11 @@ class HomoSapiens(Humano):
 
 if __name__ == "__main__":
     # Não é possível instanciar uma classe abstrata
-    try:
-        anonimo = Humano('John Doe')
-        print(anonimo.inteligente)
-    except TypeError:
-        print('Não é possível instanciar uma classe abstrata!')
+    #try:
+    #    anonimo = Humano('John Doe')
+    #    print(anonimo.inteligente)
+    #except TypeError:
+    #    print('Não é possível instanciar uma classe abstrata!')
 
     jose = HomoSapiens('José')
     print('{} da classe {} : inteligente = {}'.format(jose.nome, jose.__class__.__name__, jose.inteligente))
