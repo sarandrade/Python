@@ -1,3 +1,5 @@
+# Minha versão
+
 def mdc(numeros):
     divisores = list(map(divisor, numeros))
 
