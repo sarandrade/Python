@@ -3,6 +3,11 @@ insert into cidades
 values
     ('Niterói', 133.9, 46)
 
+insert into cidades 
+    (nome, area, estado_id)
+values
+    ('Campinas', 795, 52)
+
 insert into cidades
     (nome, area, estado_id)
 values (
