@@ -1,6 +1,6 @@
 from conexao import nova_conexao
 
-sql = 'SELECT nome, tel FROM contatos WHERE nome like %s'
+sql = 'SELECT id, nome, tel FROM contatos WHERE nome like %s'
 
 with nova_conexao() as conexao:
     nome = input('Contato a localizar: ')
